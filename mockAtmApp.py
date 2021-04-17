@@ -8,3 +8,16 @@ allowedUsers = ['Siegfred', 'Kachi', 'Samantha', 'Ojochide']
 allowedPassword = ["passSieg", "passKach", "passSam", "passChide"]
 
 
+def welcome():
+    print('Welcome to your ATM')
+    choice = int(input("Choose 1. To Login 2. To Register 3. Exit..."))
+    if choice == 1:
+        login()
+    elif choice == 2:
+        register()
+    elif choice == 3:
+        exit()
+    else:
+        print("Invalid Entry")
+        welcome()
+
