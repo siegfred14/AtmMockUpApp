@@ -21,3 +21,13 @@ def welcome():
         print("Invalid Entry")
         welcome()
 
+
+# function to generate unique 10 digit account number
+def account_number_generator(database):
+    account_number = random.randint(0000000000, 9999999999)
+    if account_number in database:
+        account_number_generator(database)
+    else:
+        database.append(account_number)
+        print(f"Account Created Successfully \n Your Account Number Is {account_number}")
+
