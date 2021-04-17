@@ -85,3 +85,24 @@ def felicitations(name, acc_number):
     print(f"Your Account Number is {acc_number}")
 
 
+# Operations
+def operation():
+    selected_option = int(input('Please Select an Option: \n 1. Withdrawal \n '
+                                '2. Cash Deposit \n 3. Complaint \n 4. Exit...'))
+    balance = 500
+
+    if selected_option == 1:
+        withdraw(selected_option, balance)
+    elif selected_option == 2:
+        deposit(selected_option, balance)
+    elif selected_option == 3:
+        input('What Issue Would You Like To Report? \n ...')
+        print('\n Thank You For Contacting Us!')
+        operation()
+    elif selected_option == 4:
+        print("Thank You for Banking with Us")
+        exit()
+    else:
+        print("Wrong Input!!!")
+        operation()
+
