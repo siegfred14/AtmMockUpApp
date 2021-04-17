@@ -31,3 +31,23 @@ def account_number_generator(database):
         database.append(account_number)
         print(f"Account Created Successfully \n Your Account Number Is {account_number}")
 
+
+# Add Account number tomorrow
+# Register Function to create user profile/account
+def register():
+    create_username = input("create a username...")
+    if create_username in allowedUsers:
+        print("Username Already in Use! \n Select Another")
+        register()
+    else:
+        create_password = input("create a password...")
+        confirm_password = input("Confirm Your Password...")
+        if create_password == confirm_password:
+            allowedUsers.append(create_username)
+            allowedPassword.append(create_password)
+            account_number_generator(account_numbers)
+            login()
+        else:
+            print("Password is not the same as confirmed password!")
+            register()
+
