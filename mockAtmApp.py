@@ -129,4 +129,6 @@ def deposit(selection, bal):
     operation()
 
 
+welcome()
+
 
