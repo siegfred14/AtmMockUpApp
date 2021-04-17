@@ -106,3 +106,16 @@ def operation():
         print("Wrong Input!!!")
         operation()
 
+
+def withdraw(selection, bal):
+    print('You selected %i' % selection)
+    amount_to_withdraw = int(input('Enter Amount: \n'))
+    if amount_to_withdraw > bal:
+        print('Insufficient Balance')
+        withdraw(selection, bal)
+    else:
+        bal = bal - amount_to_withdraw
+        print('Please Take your Cash')
+        print('Your Balance is %i' % bal)
+        operation()
+
