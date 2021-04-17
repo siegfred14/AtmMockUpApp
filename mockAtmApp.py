@@ -119,3 +119,14 @@ def withdraw(selection, bal):
         print('Your Balance is %i' % bal)
         operation()
 
+
+def deposit(selection, bal):
+    print('You selected %i' % selection)
+    amount_to_deposit = int(input('Enter Amount: \n'))
+    bal = bal + amount_to_deposit
+    print('Transaction Successful!')
+    print('Your Ledger Balance is %i' % bal)
+    operation()
+
+
+
