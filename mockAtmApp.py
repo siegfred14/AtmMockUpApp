@@ -70,3 +70,12 @@ def login():
         print('Name not found. Please Try Again')
         login()
 
+
+# Date and Time added --python set timeout
+def date_item():
+    abuja_date = datetime.now().strftime("%d/%m/%Y")
+    abuja_time = datetime.now().strftime("%H:%M:%S")
+    print("Today is ", abuja_date)
+    print("Time is ", abuja_time)
+
+
