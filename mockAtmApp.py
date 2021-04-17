@@ -51,3 +51,22 @@ def register():
             print("Password is not the same as confirmed password!")
             register()
 
+
+# Login function to access user account and perform functions
+def login():
+    username = input('What is your username? \n')
+    if username in allowedUsers:
+        user_id = allowedUsers.index(username)
+        account_num = account_numbers[user_id]
+        password = input("Your Password? \n")
+        if password == allowedPassword[user_id]:
+            date_item()
+            felicitations(username, account_num)
+            operation()
+        else:
+            print('Password incorrect, Please try again')
+            login()
+    else:
+        print('Name not found. Please Try Again')
+        login()
+
