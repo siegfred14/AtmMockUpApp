@@ -79,3 +79,9 @@ def date_item():
     print("Time is ", abuja_time)
 
 
+def felicitations(name, acc_number):
+    print('\n Dear %s' % name)
+    print('Welcome to Zuri Bank!')
+    print(f"Your Account Number is {acc_number}")
+
+
