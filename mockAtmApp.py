@@ -73,7 +73,6 @@ def login():
         current_balance = balance[user_id]
         password = input("Your Password? \n")
         if password == allowedPassword[user_id]:
-            date_item()
             felicitations(name, account_num)
             operation(current_balance)
         else:
@@ -84,15 +83,12 @@ def login():
         login()
 
 
-# Date and Time added
-def date_item():
+# welcome message
+def felicitations(name, acc_number):
     abuja_date = datetime.now().strftime("%d/%m/%Y")
     abuja_time = datetime.now().strftime("%H:%M:%S")
     print("Today is ", abuja_date)
     print("Time is ", abuja_time)
-
-
-def felicitations(name, acc_number):
     print('\n Dear %s' % name)
     print('Welcome to Zuri Bank!')
     print(f"Your Account Number is {acc_number}")
