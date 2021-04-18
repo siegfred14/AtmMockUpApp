@@ -154,6 +154,7 @@ def options(entry):
         welcome()
     else:
         print("Please Enter a Valid Entry!")
+        options(entry)
 
 
 welcome()
