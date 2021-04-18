@@ -13,7 +13,7 @@ allowedPassword = ["passSieg", "passKach", "passSam", "passChide"]
 
 def welcome():
     print('Welcome to your ATM')
-    choice = int(input("Choose \n 1. To Login \n 2. To Register \n 3. Exit \n ... "))
+    choice = int(input("Choose | 1. To Login | 2. To Register | 3. To Exit \n ... "))
     if choice == 1:
         login()
     elif choice == 2:
@@ -33,10 +33,9 @@ def account_number_generator(database):
     else:
         database.append(account_number)
         print(f"Account Created Successfully! \n "
-              f"Your Account Number Is -> {account_number} <- \n ******************")
+              f"Your Account Number Is \n -> {account_number} <- \n ******************")
 
 
-# Add Account number tomorrow
 # Register Function to create user profile/account
 def register():
     print("********REGISTER********")
@@ -115,14 +114,14 @@ def operation(current_balance):
         print("Thank You for Banking with Us \n *****************")
         welcome()
     else:
-        print("Wrong Input!!!")
+        print("Invalid Entry!!!")
         operation(current_balance)
 
 
 # function to compute user withdrawals
 def withdraw(bal):
     print("********WITHDRAWAL********")
-    amount_to_withdraw = int(input('Enter Amount: \n'))
+    amount_to_withdraw = int(input('Enter Amount To Withdraw: \n'))
     if amount_to_withdraw > bal:
         print('Insufficient Balance')
         withdraw(bal)
