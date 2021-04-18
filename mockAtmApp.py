@@ -84,7 +84,7 @@ def login():
         login()
 
 
-# Date and Time added --python set timeout
+# Date and Time added
 def date_item():
     abuja_date = datetime.now().strftime("%d/%m/%Y")
     abuja_time = datetime.now().strftime("%H:%M:%S")
@@ -98,7 +98,7 @@ def felicitations(name, acc_number):
     print(f"Your Account Number is {acc_number}")
 
 
-# Operations
+# function to determine choices of operations
 def operation(current_balance):
     selected_option = int(input('Please Select an Option: \n 1. Withdrawal \n '
                                 '2. Cash Deposit \n 3. Check Balance \n '
@@ -123,6 +123,7 @@ def operation(current_balance):
         operation(current_balance)
 
 
+# function to compute user withdrawals
 def withdraw(bal):
     print("********WITHDRAWAL********")
     amount_to_withdraw = int(input('Enter Amount: \n'))
@@ -136,6 +137,7 @@ def withdraw(bal):
         options(bal)
 
 
+# function to compute user deposits
 def deposit(bal):
     print("********DEPOSIT********")
     amount_to_deposit = int(input('Enter Amount: \n'))
@@ -145,6 +147,7 @@ def deposit(bal):
     options(bal)
 
 
+# options to validate user choice
 def options(entry):
     question = int(input("Do You Want to Perform Another Transaction?"
                          " 1.(Yes) 2.(No) ..."))
